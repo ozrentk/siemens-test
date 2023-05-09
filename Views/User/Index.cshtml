@@ -1,0 +1,20 @@
+﻿@using Task12.BL.Models;
+@model IEnumerable<User>
+
+@if (Model != null)
+{
+<ul>
+    @foreach(var user in @Model)
+    {
+        <li>@user.Username</li>
+    }
+</ul>
+}
+
+<a asp-action="register" class="btn btn-outline-primary">Register</a>
+<a asp-action="validateEmail" asp-route-email="test@test.info" class="btn btn-outline-primary">Validate E-mail</a>
+<a asp-action="login" class="btn btn-outline-primary">Login</a>
+<form asp-action="logout">
+    <button type="submit" class="btn btn-outline-primary">Logout</button>
+</form>
+<a asp-action="changepassword" class="btn btn-outline-primary">Change Password</a>

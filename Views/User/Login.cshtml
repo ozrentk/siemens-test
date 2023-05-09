@@ -1,0 +1,52 @@
+﻿@using Task12.Models.User;
+@model VMLogin
+@{
+}
+<form asp-action="Login">
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="Username" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="text" asp-for="Username" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="Password" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="password" asp-for="Password" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="StaySignedIn" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <div class="form-check form-switch">
+                <input type="checkbox" asp-for="StaySignedIn" class="form-check-input">
+            </div>
+        </div>
+        <div class="col-3">
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col-2"></div>
+        <div class="col-3">
+            <input type="hidden" asp-for="RedirectUrl" class="form-check-input">
+            <input type="submit" value="Login" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

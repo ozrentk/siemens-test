@@ -1,0 +1,94 @@
+﻿@using Task12.Models.User;
+@model VMRegister
+@{
+}
+<form asp-action="Register">
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="Username" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="text" asp-for="Username" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="Email" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="text" asp-for="Email" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="Email2" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="text" asp-for="Email2" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="Email2" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="FirstName" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="text" asp-for="FirstName" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="LastName" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="text" asp-for="LastName" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="Password" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="password" asp-for="Password" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-2">
+            <label asp-for="Password2" class="col-form-label"></label>
+        </div>
+        <div class="col-3">
+            <input type="password" asp-for="Password2" class="form-control">
+        </div>
+        <div class="col-3">
+            <span asp-validation-for="Password2" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col-2"></div>
+        <div class="col-3">
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

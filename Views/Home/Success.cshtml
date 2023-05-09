@@ -1,0 +1,11 @@
+﻿@{
+    var personName = TempData["personName"] as string;
+    var personBirthMonth = TempData["personBirthMonth"] as string;
+}
+
+<h1>You have succesfully submitted the data</h1>
+<hr />
+<div class="text-primary">Name: @personName</div>
+<div class="text-primary">Month of birth: @personBirthMonth</div>
+<hr />
+<a asp-controller="Home" asp-action="Index" class="btn-sm btn-primary">Back</a>

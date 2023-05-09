@@ -1,0 +1,10 @@
+﻿@{
+    string path = ViewData["path"] as string;
+    string message = ViewData["errorMessage"] as string;
+}
+<h1>There has been an error</h1>
+<hr />
+<div class="text-danger">Path: @path</div>
+<div class="text-danger">Message: @message</div>
+<hr />
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>

@@ -1,0 +1,43 @@
+﻿@model PersonalData
+
+@{
+}
+
+<form asp-controller="Home" asp-action="Index">
+    <div class="form-group row">
+        <label asp-for="FirstName" class="col-2 col-form-label"></label>
+        <div class="col-2">
+            <input type="text" asp-for="FirstName" class="form-control">
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="LastName" class="col-2 col-form-label"></label>
+        <div class="col-2">
+            <input type="text" asp-for="LastName" class="form-control">
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Email" class="col-2 col-form-label"></label>
+        <div class="col-2">
+            <input type="email" asp-for="Email" class="form-control">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="DateOfBirth" class="col-2 col-form-label"></label>
+        <div class="col-2">
+            <input type="date" asp-for="DateOfBirth" class="form-control">
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="SendUpdates" class="col-2 form-check-label"></label>
+        <div class="col-2 form-check form-switch">
+            <input type="checkbox" asp-for="SendUpdates" class="form-check-input">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
+    <button type="reset" class="btn btn-danger">Reset</button>
+</form>
