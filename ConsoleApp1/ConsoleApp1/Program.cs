@@ -19,6 +19,8 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine("Finished writing lines.");
+            Console.WriteLine("Finished writing lines02.");
+            Console.WriteLine("Finished writing lines03.");
 
             Console.ReadLine();
         }
